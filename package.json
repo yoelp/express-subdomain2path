@@ -1,0 +1,14 @@
+{
+  "name": "expressSubdomain2path",
+  "version": "0.0.1",
+  "description": "Express middleware to add subdomain to path so it can be handled by the express router",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yoel Porgesz",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.13.1"
+  }
+}
