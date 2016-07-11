@@ -17,7 +17,7 @@ The ```subdomain2path``` function take an optional but reccomended ```options```
 Note: if you set ```ignoreDomains```, only domains in the list will be ignored even if you set ```fullDomain``` to ```false``` also a domain in ```ignoredDomains``` will be ignored even if ```fullDomain``` is set to ```true```.
 
 ##### fullDomain
-Defaults to ```false```, sets whether the full domain should be conevrted or not, leaving this as is will automaticlly remove the top domain from being converted, (using regex ```/.?\..*?).
+Defaults to ```false```, sets whether the full domain should be conevrted or not, leaving this as is will automaticlly remove the top domain from being converted, (using regex ```/.?\..*?```).
 #
 Note: setting this to ```true``` will conevert the full domain togther with the TLD, ex: the path will become ```/com/example/ex1```, if you do not want this behavior you can omit this setting and only set ```ignoredDomains``` to ```[".com"]```, which will have the desired effect.
 ##### reverse
