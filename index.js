@@ -25,7 +25,7 @@ var setup = function(config){
 var converter = function(req,res,next){
 	var subs;
 	//saving original path
-	req.originalUrl = req.url;
+	req.trueUrl = req.url;
 	//remove the port if present.
 	subs = req.headers.host.replace(/:.*$/,"");
 	//removing the ignored domain;
