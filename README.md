@@ -33,6 +33,6 @@ Will follow.
 ***
 
 ###Tests 
-```js
+```sh
 npm test
 ```
