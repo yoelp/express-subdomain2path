@@ -45,7 +45,7 @@ var converter = function(req,res,next){
 	subs = subs.join("/");
 
 	//assigning to req.url (replacing first `/` from the old url)
-	req.url = "/" + subs +"/"+ req.url.replace(/^\//,"");
+	req.url = "/" + subs + (subs?"/":"") + req.url.replace(/^\//,"");
 	next();
 }
 
