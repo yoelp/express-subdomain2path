@@ -13,7 +13,7 @@ var escapeRegexpString = function(str){
 var setup = function(config){
 	settings  = _.merge(settings,config);
 	settings.ignoreDomains = settings.ignoreDomains.map(function(item){
-		item = escapeStringRegexp(item);
+		item = escapeRegexpString(item);
 		item = new RegExp(item+"$");
 		return item;
 	});
