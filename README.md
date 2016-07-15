@@ -29,3 +29,10 @@ Defaults to ```true```, sets wheter the order of domain levels should be convert
 
 #Examples
 Will follow.
+
+***
+
+###Tests 
+```js
+npm test
+```
