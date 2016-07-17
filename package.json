@@ -1,13 +1,17 @@
 {
-  "name": "expressSubdomain2path",
-  "version": "0.0.1",
+  "name": "express-subdomain2path",
+  "version": "1.0.0",
   "description": "Express middleware to add subdomain to path so it can be handled by the express router",
   "main": "index.js",
   "scripts": {
     "test": "cd test && nodeunit index.js"
   },
   "author": "Yoel Porgesz",
-  "license": "MIT",
+  "homepage" : "https://github.com/yoelp/express-subdomain2path",
+  "repository" : {
+    "type" : "git",
+    "url" : "git://github.com/yoelp/express-subdomain2path.git"
+  },
   "dependencies": {
     "lodash": "^4.13.1"
   },
