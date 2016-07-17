@@ -12,6 +12,12 @@ var escapeRegexpString = function(str){
 
 var setup = function(config){
 	settings  = _.merge(settings,config);
+	if(settings.ignoreDomains){
+		//sort by length, so more detailed subdomains will have priority 
+		settings.ignoreDomains.sort(function(a,b){
+			return b.length - a.length;
+		});
+	}
 	settings.ignoreDomains = settings.ignoreDomains.map(function(item){
 		item = escapeRegexpString(item);
 		item = new RegExp(item+"$");
