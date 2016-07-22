@@ -197,4 +197,25 @@ exports.testWithIgnoreDomains = function(test) {
     });
 };
 
+exports.testWithSubpath = function(test) {
+    test.expect(1);
+    cp = spawn("node",["app.js","subpath"]);
+
+    cp.stdout.on('data', (data) => {
+    	//test when no subdomains, no path.
+	    request({
+	    	method : "GET",
+	    	url : "http://localhost:9876/",
+	    	headers : {
+	    		"host" : "team1.org1.example.com"
+	    	}
+	    },function(err,res,body){
+	    	var expected = "/subdomain/org1/team1/";
+	    	body = JSON.parse(body);
+	    	test.equal(body.path, expected,`Body ${body.path} should match ${expected}`);
+	    	test.done();
+	    	cp.kill();
+	    });
+    });
+};
 

@@ -3,7 +3,8 @@ var _ = require("lodash");
 var settings = {
 	fullDomain : false,
 	ignoreDomains : [],
-	reverse : true
+	reverse : true,
+	subPath : ""
 }
 var escapeRegexpString = function(str){
 	//escapes regex literals in a string.
@@ -49,7 +50,8 @@ var converter = function(req,res,next){
 		subs = subs.reverse()
 	}
 	subs = subs.join("/");
-
+	//add subpath if in settings
+	subs = (settings.subPath ? (settings.subPath + "/") : "") + subs;
 	//assigning to req.url (replacing first `/` from the old url)
 	req.url = "/" + subs + (subs?"/":"") + req.url.replace(/^\//,"");
 	next();

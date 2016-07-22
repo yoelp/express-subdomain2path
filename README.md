@@ -33,6 +33,8 @@ Defaults to ```false```, sets whether the full domain should be converted or not
 Note: setting this to ```true``` will convert the full domain together with the TLD, ex: the path will become ```/com/example/ex1```, if you only want the domain and not the TLD you can omit this setting and only set ```ignoredDomains``` to ```[".com"]```, which will have the desired effect.
 ##### reverse
 Defaults to ```true```, sets whether the order of domain levels should be converted in path, ex: given ```room1.org1.exmple.org``` when reverse is ```true``` it will give ```/org1/room1```, setting it to ```false``` will give ```/room1/org1```.
+##### subPath
+You can specify subpath under which the subdomains should be attached to the path, ex: setting ```subPath``` to ```subdomain``` will endup converting ```team1.org1.example.com``` to ```/subdomain/org1/team1/```.
 
 ***
 
