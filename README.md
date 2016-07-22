@@ -3,9 +3,14 @@ Express middleware to add subdomains (or full domain) to the path so it can be h
 #
 The Express Router can control routing based on paths out of the box, but not based on subdomains, this middleware will add the subdomain to the beginning of the path so you can have routes based on subdomains. 
 
+##Install
+```sh
+npm install --save express-subdomain2path
+```
+
 ## Usage
 ```js
-var subdomain2path = require("subdomain2path");
+var subdomain2path = require("express-subdomain2path");
 var options = {
 	ignoreDomains : ["admin.example.com","example.com"];
 }
