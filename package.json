@@ -1,6 +1,6 @@
 {
   "name": "express-subdomain2path",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Express middleware to add subdomain to path so it can be handled by the express router",
   "main": "index.js",
   "scripts": {
